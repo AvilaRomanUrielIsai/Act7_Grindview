@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisCount: 2,
               crossAxisSpacing: 1,
               mainAxisSpacing: 5,
-              mainAxisExtent: 150,
+              mainAxisExtent: 300,
               childAspectRatio: 2),
           children: [
             Container(
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Image.asset(
                     images[0],
-                    scale: 5,
+                    scale: 1,
                   ),
                   const Text(
                     "Air",
@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Image.asset(
                     images[1],
-                    scale: 5,
+                    scale: 1,
                   ),
                   const Text(
                     "Los 3 Mosqueteros",
@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Image.asset(
                     images[2],
-                    scale: 5,
+                    scale: 1,
                   ),
                   const Text(
                     "Dungeons and Dragons",
@@ -101,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Image.asset(
                     images[3],
-                    scale: 5,
+                    scale: 1,
                   ),
                   const Text(
                     "El Exorcista del Papa",
@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Image.asset(
                     images[4],
-                    scale: 5,
+                    scale: 1,
                   ),
                   const Text(
                     "Oso Vicioso",
@@ -131,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Image.asset(
                     images[5],
-                    scale: 5,
+                    scale: 1,
                   ),
                   const Text(
                     "Renfield",
@@ -146,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Image.asset(
                     images[6],
-                    scale: 5,
+                    scale: 1,
                   ),
                   const Text(
                     "Super Mario Bros: La Película",
@@ -161,7 +161,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Image.asset(
                     images[7],
-                    scale: 5,
+                    scale: 1,
                   ),
                   const Text(
                     "Suzume",
