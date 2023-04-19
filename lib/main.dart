@@ -1,42 +1,60 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+        title: 'Flutter App Learning',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.purple,
+        ),
+        home: MyHomePage());
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key? key}) : super(key: key);
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
 
+class _MyHomePageState extends State<MyHomePage> {
+  List<String> images = [
+    "assets/images/AIR.jpg",
+    "assets/images/D'Artagnan.jpg",
+    "assets/images/Dungeons.jpg",
+    "assets/images/Exorcista_papa.jpg",
+    "assets/images/Oso_vicioso.jpg",
+    "assets/images/Renfield.jpg",
+    "assets/images/Super_Mario.jpg",
+    "assets/images/Suzume.jpg"
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+        appBar: AppBar(
+          title: Text("Vista Grind en Flutter"),
         ),
-      ),
-    );
+        body: GridView.custom(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+          ),
+          childrenDelegate: SliverChildBuilderDelegate(
+            (BuildContext, index) {
+              return Image.asset(
+                images[index],
+                fit: BoxFit.cover,
+              );
+            },
+            childCount: 8,
+          ),
+          padding: EdgeInsets.all(10),
+          shrinkWrap: true,
+        ));
   }
 }
