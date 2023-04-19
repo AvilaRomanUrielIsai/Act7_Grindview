@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -40,20 +42,135 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Vista Grind en Flutter"),
         ),
-        body: GridView.custom(
+        body: GridView(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-          ),
-          childrenDelegate: SliverChildBuilderDelegate(
-            (BuildContext, index) {
-              return Image.asset(
-                images[index],
-                fit: BoxFit.cover,
-              );
-            },
-            childCount: 8,
-          ),
-          padding: EdgeInsets.all(10),
+              crossAxisCount: 2,
+              crossAxisSpacing: 1,
+              mainAxisSpacing: 5,
+              mainAxisExtent: 150,
+              childAspectRatio: 2),
+          children: [
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    images[0],
+                    scale: 5,
+                  ),
+                  const Text(
+                    "Air",
+                    style: TextStyle(color: Color(0xff000000), fontSize: 20),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    images[1],
+                    scale: 5,
+                  ),
+                  const Text(
+                    "Los 3 Mosqueteros",
+                    style: TextStyle(color: Color(0xff000000), fontSize: 20),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    images[2],
+                    scale: 5,
+                  ),
+                  const Text(
+                    "Dungeons and Dragons",
+                    style: TextStyle(color: Color(0xff000000), fontSize: 20),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    images[3],
+                    scale: 5,
+                  ),
+                  const Text(
+                    "El Exorcista del Papa",
+                    style: TextStyle(color: Color(0xff000000), fontSize: 20),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    images[4],
+                    scale: 5,
+                  ),
+                  const Text(
+                    "Oso Vicioso",
+                    style: TextStyle(color: Color(0xff000000), fontSize: 20),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    images[5],
+                    scale: 5,
+                  ),
+                  const Text(
+                    "Renfield",
+                    style: TextStyle(color: Color(0xff000000), fontSize: 20),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    images[6],
+                    scale: 5,
+                  ),
+                  const Text(
+                    "Super Mario Bros: La Película",
+                    style: TextStyle(color: Color(0xff000000), fontSize: 20),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    images[7],
+                    scale: 5,
+                  ),
+                  const Text(
+                    "Suzume",
+                    style: TextStyle(color: Color(0xff000000), fontSize: 20),
+                  )
+                ],
+              ),
+            ),
+          ],
           shrinkWrap: true,
         ));
   }
